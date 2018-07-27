@@ -23,7 +23,7 @@ final class LoadExtra extends Controller
             ->get();
 
         if($jobs->count() === 0) {
-            return Response::create('', Response::HTTP_NO_CONTENT);
+            return view('no-more');
         }
 
         return view('link-load', [

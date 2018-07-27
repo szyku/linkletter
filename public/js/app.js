@@ -13867,13 +13867,12 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(43);
+module.exports = __webpack_require__(39);
 
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
-
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -13897,17 +13896,37 @@ window.Vue = __webpack_require__(36);
 //     el: '#app'
 // });
 
-$(document).on('click', 'a#item-loader', function (e) {
-  e.preventDefault();
-  var url = e.currentTarget.href;
-  $.get({
-    url: url,
-    success: function success(data) {
-      var parent = $('#item-loader').parent();
-      $('#item-loader').remove();
-      parent.append(data);
+$(document).on('click', 'button#loader', function (e) {
+    e.preventDefault();
+    var $button = $(e.currentTarget);
+    var url = $button.data('url');
+    $button.children('.emoji').last().hide();
+    $button.find('.loader').removeClass('invisible');
+    $.get({
+        url: url,
+        success: function success(data) {
+            var $parent = $button.parent();
+            $button.remove();
+            $parent.append(data);
+        }
+    });
+});
+
+$(document).on('click', 'button#top-button', function () {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Other
+});
+
+$(document).scroll(function (e) {
+    var currentScroll = $(window).scrollTop();
+    var $button = $("#top-button");
+    if (currentScroll > 20) {
+        $button.css('visibility', 'visible');
+        $button.css('opacity', 1);
+    } else {
+        $button.css('visibility', 'hidden');
+        $button.css('opacity', 0);
     }
-  });
 });
 
 /***/ }),
@@ -47180,11 +47199,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(6)))
 
 /***/ }),
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */
+/* 39 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

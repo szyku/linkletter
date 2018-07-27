@@ -5,13 +5,18 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import "~font-awesome/scss/font-awesome.scss";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-#item-loader {
-  text-align: center;
-  display: block;
+#loader {
+  display: inline-block;
+  margin: 0 auto;
+  .loader.invisible {
+    margin-left: -1.5em;
+  }
 }
 .link-wrapper {
   max-width: $body-max-width;
@@ -44,4 +49,18 @@
     }
   }
 
+}
+
+#top-button {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: fixed;
+  width: 3em;
+  height: 3em;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  outline: none;
+  border-radius: 50% !important;
 }

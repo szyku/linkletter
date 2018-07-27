@@ -12,4 +12,5 @@
 */
 
 Route::get('/load', 'LoadExtra')->name('load');
+Route::get('/issue/{id}', 'SingleBatch')->name('single');
 Route::get('/', 'Homepage')->name('home');

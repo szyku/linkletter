@@ -1,2 +1,4 @@
 @each('dispatch-group', $dispatchGroups, 'dispatchGroup')
-<a id="item-loader" href="{{ route('load', ['offset' => $nextOffset]) }}">[Click to load more awesome] 👊</a>
+@component('loader')
+    {{ route('load', ['offset' => $nextOffset]) }}
+@endcomponent

@@ -13,7 +13,7 @@ final class Homepage extends Controller
         $itemsPerPage = config('view.items_per_batch');
         $groups = DispatchJob::take($itemsPerPage)->where('dispatched', true)->orderBy('id', 'desc')->get();
 
-        return view('layout', ['dispatchGroups' => $groups]);
+        return view('dispatch-group-list', ['dispatchGroups' => $groups]);
     }
 
 }

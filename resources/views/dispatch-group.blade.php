@@ -1,6 +1,6 @@
 <article class="dispatch-group">
     <header>
-        <h2>{{$dispatchGroup->title}}</h2>
+        <h2><a href="{{route('single', ['id' => $dispatchGroup->id])}}">{{$dispatchGroup->title}}</a></h2>
     </header>
     <main>
         @each('group', $dispatchGroup->groups, 'group')

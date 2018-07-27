@@ -20,15 +20,7 @@
         <p class="lead">The best dev news every week!</p>
     </div>
 </div>
-<div class="link-wrapper">
-    <div class="container-fluid">
-        <div class="col-sm">
-            @each('dispatch-group', $dispatchGroups, 'dispatchGroup')
-            <a id="item-loader" href="{{ route('load', ['offset' => config('view.items_per_batch')]) }}">[Click to load more awesome] 👊</a>
-        </div>
-    </div>
-</div>
-
+@yield('content')
 <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 </body>
 

@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -21,15 +20,35 @@ window.Vue = require('vue');
 //     el: '#app'
 // });
 
-$(document).on('click', 'a#item-loader', function (e){
-   e.preventDefault();
-   let url = e.currentTarget.href;
-   $.get({
-       url: url,
-       success: (data) => {
-           let parent = $('#item-loader').parent();
-           $('#item-loader').remove();
-           parent.append(data);
-       }
-   })
+$(document).on('click', 'button#loader', function (e) {
+    e.preventDefault();
+    let $button = $(e.currentTarget);
+    let url = $button.data('url');
+    $button.children('.emoji').last().hide();
+    $button.find('.loader').removeClass('invisible');
+    $.get({
+        url: url,
+        success: (data) => {
+            let $parent = $button.parent();
+            $button.remove();
+            $parent.append(data);
+        }
+    });
+});
+
+$(document).on('click', 'button#top-button', () => {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Other
+});
+
+$(document).scroll(function (e) {
+    let currentScroll = $(window).scrollTop();
+    let $button = $("#top-button");
+    if (currentScroll > 20 ) {
+        $button.css('visibility', 'visible');
+        $button.css('opacity', 1);
+    } else {
+        $button.css('visibility', 'hidden');
+        $button.css('opacity', 0);
+    }
 });
