@@ -17,8 +17,10 @@ class CreatesDispatchJobs extends Migration
             $table->increments('id');
             $table->date('dispatch_at');
             $table->string('title', 1024);
+            $table->string('slug', 1058);
             $table->boolean('dispatched');
             $table->timestamps();
+            $table->unique('slug');
         });
     }
 

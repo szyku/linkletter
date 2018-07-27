@@ -13526,10 +13526,31 @@ a.text-dark:focus {
   clip: auto;
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.sub-form {
+  padding-top: 1em;
+}
+
+.sub-form small {
+  font-size: .75em;
+}
+
+.sub-form .errors {
+  font-size: .75em;
+  color: #e3342f;
+}
+
+.sub-form .errors li:before {
+  content: "\2757";
+}
+
+.sub-form .success {
+  margin: .25em 0;
+  font-size: .85em;
+  color: #38c172;
+}
+
+.sub-form .success:before {
+  content: "\2714";
 }
 
 #loader {
@@ -13594,5 +13615,9 @@ a.text-dark:focus {
   z-index: 99;
   outline: none;
   border-radius: 50% !important;
+}
+
+#top-button i {
+  font-size: 2em;
 }
 

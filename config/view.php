@@ -31,4 +31,5 @@ return [
     'compiled' => realpath(storage_path('framework/views')),
 
     'items_per_batch' => env('ITEMS_PER_BATCH', 3),
+    'tag_links_per_batch' => env('ITEMS_PER_BATCH', 15),
 ];

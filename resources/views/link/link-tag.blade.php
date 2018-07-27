@@ -1,0 +1,1 @@
+[<a href="{{route('tag', ['slug' => $tag->slug])}}">{{$tag->name}}</a>]

@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 
 class SingleBatch extends Controller
 {
-    public function __invoke(int $id)
+    public function __invoke(DispatchJob $job)
     {
-        $job = DispatchJob::where('dispatched', true)->findOrFail($id);
-
         return view('single-job', ['dispatchGroup' => $job]);
     }
 }

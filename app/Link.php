@@ -14,4 +14,9 @@ class Link extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }

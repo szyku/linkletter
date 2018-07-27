@@ -16,9 +16,11 @@ class CreateGroupTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('group_name', 1024);
+            $table->string('slug', 1058);
             $table->integer('order');
             $table->unsignedInteger('dispatch_job_id');
             $table->foreign('dispatch_job_id')->references('id')->on('dispatch_jobs')->onDelete('cascade');
+            $table->unique('slug');
         });
     }
 

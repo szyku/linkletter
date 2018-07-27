@@ -6,9 +6,8 @@ namespace App\Http\Controllers;
 
 use App\DispatchJob;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
-final class LoadExtra extends Controller
+final class LoadDispatchGroups extends Controller
 {
     public function __invoke(Request $request)
     {
@@ -26,7 +25,7 @@ final class LoadExtra extends Controller
             return view('no-more');
         }
 
-        return view('link-load', [
+        return view('dispatch-group.dispatch-group-load', [
             'dispatchGroups' => $jobs,
             'nextOffset' => $validated['offset'] + $itemsPerBatch,
         ]);

@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-07-25 18:15:34.
+    * Generated on 2018-07-27 19:57:27.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -39,6 +39,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -177,6 +178,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -315,6 +317,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -453,6 +456,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -591,6 +595,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -729,6 +734,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,
@@ -867,6 +873,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Cviebrock\EloquentSluggable\SluggableObserver' => \Cviebrock\EloquentSluggable\SluggableObserver::class,
         'command.laracasts.seed' => \Laracasts\Generators\Commands\SeedMakeCommand::class,
         'command.laracasts.migrate' => \Laracasts\Generators\Commands\MigrationMakeCommand::class,
         'command.laracasts.migrate.pivot' => \Laracasts\Generators\Commands\PivotMigrationMakeCommand::class,

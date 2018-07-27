@@ -16,7 +16,7 @@ class LinksSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tag::class, 20)->create();
+        factory(Tag::class, 5)->create();
         factory(DispatchJob::class, 9)->create();
 
         $jobs = DispatchJob::all();
