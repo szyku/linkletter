@@ -108,6 +108,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'enable_newsletter' => env('ENABLE_NEWSLETTER'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.28 on 2018-07-27 19:57:27.
+ * Generated for Laravel 5.6.28 on 2018-07-29 11:39:13.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12499,6 +12499,417 @@ namespace Illuminate\Support\Facades {
  
 }
 
+namespace Arrilot\Widgets { 
+
+    class Facade {
+        
+        /**
+         * Run widget without magic method.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function run()
+        {
+            return \Arrilot\Widgets\Factories\WidgetFactory::run();
+        }
+        
+        /**
+         * Encrypt widget params to be transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+            return \Arrilot\Widgets\Factories\WidgetFactory::encryptWidgetParams($params);
+        }
+        
+        /**
+         * Decrypt widget params that were transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+            return \Arrilot\Widgets\Factories\WidgetFactory::decryptWidgetParams($params);
+        }
+         
+    }
+
+    class AsyncFacade {
+        
+        /**
+         * Run widget without magic method.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function run()
+        {
+            return \Arrilot\Widgets\Factories\AsyncWidgetFactory::run();
+        }
+        
+        /**
+         * Encrypt widget params to be transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function encryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+            return \Arrilot\Widgets\Factories\AsyncWidgetFactory::encryptWidgetParams($params);
+        }
+        
+        /**
+         * Decrypt widget params that were transported via HTTP.
+         *
+         * @param string $params
+         * @return string 
+         * @static 
+         */ 
+        public static function decryptWidgetParams($params)
+        {
+            //Method inherited from \Arrilot\Widgets\Factories\AbstractWidgetFactory            
+            return \Arrilot\Widgets\Factories\AsyncWidgetFactory::decryptWidgetParams($params);
+        }
+         
+    }
+ 
+}
+
+namespace Intervention\Image\Facades { 
+
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = array())
+        {
+            return \Intervention\Image\ImageManager::configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+            return \Intervention\Image\ImageManager::make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
+namespace TCG\Voyager\Facades { 
+
+    class Voyager {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function model($name)
+        {
+            return \TCG\Voyager\Voyager::model($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function modelClass($name)
+        {
+            return \TCG\Voyager\Voyager::modelClass($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function useModel($name, $object)
+        {
+            return \TCG\Voyager\Voyager::useModel($name, $object);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function view($name, $parameters = array())
+        {
+            return \TCG\Voyager\Voyager::view($name, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function onLoadingView($name, $closure)
+        {
+            return \TCG\Voyager\Voyager::onLoadingView($name, $closure);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function formField($row, $dataType, $dataTypeContent)
+        {
+            return \TCG\Voyager\Voyager::formField($row, $dataType, $dataTypeContent);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function afterFormFields($row, $dataType, $dataTypeContent)
+        {
+            return \TCG\Voyager\Voyager::afterFormFields($row, $dataType, $dataTypeContent);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addFormField($handler)
+        {
+            return \TCG\Voyager\Voyager::addFormField($handler);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAfterFormField($handler)
+        {
+            return \TCG\Voyager\Voyager::addAfterFormField($handler);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function formFields()
+        {
+            return \TCG\Voyager\Voyager::formFields();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAction($action)
+        {
+            return \TCG\Voyager\Voyager::addAction($action);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function replaceAction($actionToReplace, $action)
+        {
+            return \TCG\Voyager\Voyager::replaceAction($actionToReplace, $action);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function actions()
+        {
+            return \TCG\Voyager\Voyager::actions();
+        }
+        
+        /**
+         * Get a collection of the dashboard widgets.
+         *
+         * @return \Arrilot\Widgets\WidgetGroup 
+         * @static 
+         */ 
+        public static function dimmers()
+        {
+            return \TCG\Voyager\Voyager::dimmers();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setting($key, $default = null)
+        {
+            return \TCG\Voyager\Voyager::setting($key, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function image($file, $default = '')
+        {
+            return \TCG\Voyager\Voyager::image($file, $default);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function routes()
+        {
+            return \TCG\Voyager\Voyager::routes();
+        }
+        
+        /**
+         * 
+         *
+         * @deprecated 
+         * @static 
+         */ 
+        public static function can($permission)
+        {
+            return \TCG\Voyager\Voyager::can($permission);
+        }
+        
+        /**
+         * 
+         *
+         * @deprecated 
+         * @static 
+         */ 
+        public static function canOrFail($permission)
+        {
+            return \TCG\Voyager\Voyager::canOrFail($permission);
+        }
+        
+        /**
+         * 
+         *
+         * @deprecated 
+         * @static 
+         */ 
+        public static function canOrAbort($permission, $statusCode = 403)
+        {
+            return \TCG\Voyager\Voyager::canOrAbort($permission, $statusCode);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getVersion()
+        {
+            return \TCG\Voyager\Voyager::getVersion();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addAlert($alert)
+        {
+            return \TCG\Voyager\Voyager::addAlert($alert);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function alerts()
+        {
+            return \TCG\Voyager\Voyager::alerts();
+        }
+        
+        /**
+         * 
+         *
+         * @param string|\TCG\Voyager\Model|\TCG\Voyager\Collection $model
+         * @return bool 
+         * @static 
+         */ 
+        public static function translatable($model)
+        {
+            return \TCG\Voyager\Voyager::translatable($model);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getLocales()
+        {
+            return \TCG\Voyager\Voyager::getLocales();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -14842,6 +15253,14 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Widget extends \Arrilot\Widgets\Facade {}
+
+    class AsyncWidget extends \Arrilot\Widgets\AsyncFacade {}
+
+    class Image extends \Intervention\Image\Facades\Image {}
+
+    class Voyager extends \TCG\Voyager\Facades\Voyager {}
  
 }
 

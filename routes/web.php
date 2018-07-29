@@ -17,5 +17,11 @@ Route::get('/issue/{job}', 'SingleBatch')->name('single');
 Route::get('/group/{group}', 'SingleGroup')->name('group');
 Route::get('/tags/{tag}', 'SingleTag')->name('tag');
 Route::get('/', 'Homepage')->name('home');
+Route::get('/unsubscribe/{email}', 'Unsubscribe')->name('unsubscribe');
 
 Route::post('/subscribe', 'Subscribe')->name('subscribe');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
